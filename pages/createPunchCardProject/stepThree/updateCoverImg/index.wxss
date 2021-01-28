@@ -1,0 +1,63 @@
+.container {
+    background-color: white;
+    width: auto;
+    height: 100%;
+    padding: 0 30rpx 30rpx 30rpx;
+}
+
+/*上传本地图片*/
+.upload-custom-img {
+    width: 100%;
+    height: auto;
+}
+.title {
+    width: 100%;
+    height: 120rpx;
+    line-height: 120rpx;
+    color: black;
+}
+.upload-img-btn {
+    width: 48%;
+    height: 160rpx;
+    background-color: #616161;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.upload-img-btn > image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+/*系统推荐的封面背景图*/
+.system-recommend-img {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cover-img-item {
+    width: 48%;
+    height: 160rpx;
+    margin-bottom: 20rpx;
+}
+.cover-img-item > image {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*没有系统推荐封面背景图提示*/
+.not-recommend-img-notice {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: orangered;
+}

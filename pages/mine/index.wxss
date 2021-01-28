@@ -1,0 +1,268 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.container_userInfo {
+    width: 100%;
+    height: 160rpx;
+    background-color: #F0B27A;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* 用户头像*/
+.userInfo_avatar {
+    width: 20%;
+    height: 160rpx;
+}
+.avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border: 2rpx solid white;
+    margin: 26rpx 20rpx 20rpx 20rpx;
+    border-radius: 50%;
+}
+
+
+/*性别*/
+.user-sex-male {
+    width: 34rpx;
+    height: 34rpx;
+
+    border-radius: 50%;
+    background-color: white;
+
+    position: absolute;
+    left: 90rpx;
+    top: 90rpx;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.user-sex-male > image{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.user-sex-female {
+    width: 34rpx;
+    height: 34rpx;
+
+    border-radius: 50%;
+    background-color: white;
+
+    position: absolute;
+    left: 90rpx;
+    top: 90rpx;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.user-sex-female > image{
+    width: 30rpx;
+    height: 30rpx;
+    transform: rotate(30deg);
+}
+
+
+
+/* 用户id、昵称、进入个人主页按钮图标*/
+.nickname_userId {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.nick-name {
+    margin-top: 32rpx;
+    font-size: 36rpx;
+}
+
+.user-id {
+    font-size: 22rpx;
+}
+
+/* 进入个人主页按钮 */
+.mine {
+    width: 40%;
+    height: 160rpx;
+
+    font-size: 24rpx;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.into_mine_page {
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 20rpx;
+}
+
+ /* 间隔线 */
+.interval_line {
+    height: 20rpx;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+/*相关功能*/
+.functional-module {
+    width: 100%;
+    height: auto;
+    margin-top: 40rpx;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 24rpx;
+}
+
+/*我的关注*/
+.my-follow {
+    width: 25%;
+    height: 140rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-follow > image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+/*我的粉丝*/
+.my-follower {
+    width: 25%;
+    height: 140rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-follower > image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+/*我的收藏*/
+.my-collect {
+    width: 25%;
+    height: 140rpx;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-collect > image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+/*我创建的打卡圈子*/
+.my-create-project {
+    width: 25%;
+    height: 140rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-create-project > image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+/*设置*/
+.setting {
+    width: 25%;
+    height: 140rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.setting > image{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+/*打卡日记列表为空时的提示信息展示*/
+.empty-diary-list-notice {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24rpx;
+}
+.empty-diary-list-notice > image {
+    margin: 50rpx 0 20rpx 0;
+    width: 240rpx;
+    height: 240rpx;
+}
+
+/*跳转至我参与的打卡圈子列表即首页*/
+.goto-punch-card-list-page > text {
+    color: #F0B27A;
+}
+
+/*打卡日记列表展示*/
+.user-punch-card-diary-list-info {
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    width: auto;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin: 0 20rpx;
+
+    font-size: 34rpx;
+    color: black;
+    font-weight: bolder;
+}
+
+
+/* 底部*/
+.bottom {
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-bottom: 30rpx;
+    padding-top: 20rpx;
+    text-align: center;
+
+    color: #8a8a8a;
+    font-size: 30rpx;
+}

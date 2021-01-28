@@ -1,0 +1,265 @@
+.container{
+    background-color: white;
+}
+
+/*填写圈子简介获取金币活动提示*/
+.edit-project-intr-activity-notice {
+    height: 60rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+    margin-bottom: 20rpx;
+}
+
+.gold-icon {
+    width: 10%;
+    height: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gold-icon > image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 30rpx;
+}
+
+.notice-message {
+    width: 80%;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 26rpx;
+    color: orangered;
+}
+.into-btn-icon {
+    width: 10%;
+    height: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.into-btn-icon > image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 24rpx;
+}
+
+
+/*编辑按钮面板：添加文字、图片、录音、视频简介等按钮*/
+.edit-btn-panel {
+    width: 100%;
+    height: 240rpx;
+    background-color: white;
+    padding-top: 40rpx;
+}
+
+.edit-btn-panel-title {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 30rpx;
+    font-size: 32rpx;
+    color: #cccccc;
+}
+
+.edit-btn-group {
+    width: 100%;
+    height: 120rpx;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.edit-btn-item {
+    width: 60rpx;
+    height: 120rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edit-btn-item > image {
+    width: 60rpx;
+    height: 60rpx;
+}
+.edit-btn-item > text {
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 26rpx;
+    color: #cccccc;
+}
+
+.text > image {
+    width: 56rpx;
+    height: 56rpx;
+    border-radius: 6rpx;
+    border: 4rpx #F0B27A solid;
+}
+.image > image {
+    height: 60rpx;
+    width: 52rpx;
+    border-radius: 8rpx;
+    border: 4rpx #F0B27A solid;
+}
+.sound > image {
+    height: 56rpx;
+    width: 60rpx;
+}
+
+/*圈子简介信息编辑、展示区域*/
+.project-intr-info-list {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+/*编辑区域的操作按钮：排序上、下移，删除当前简介编辑区域*/
+.intr-info-btn {
+    width: auto;
+    height: 80rpx;
+    margin: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-area-title {
+    height: 80rpx;
+    width: 15%;
+    line-height: 80rpx;
+    color: black;
+    font-weight: bolder;
+    font-size: 30rpx;
+}
+
+/*上移按钮*/
+.intr-info-up-order-btn {
+    width: 10%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.intr-info-up-order-btn > image {
+    transform: rotate(180deg);
+    height: 40rpx;
+    width: 40rpx;
+    border: 2rpx #F0B27A solid;
+    border-radius: 50%;
+}
+
+.intr-info-down-order-btn {
+    width: 65%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.intr-info-down-order-btn > image {
+    height: 40rpx;
+    width: 40rpx;
+    border: 2rpx #F0B27A solid;
+    border-radius: 50%;
+}
+
+.intr-info-delete-btn {
+    width: 10%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.intr-info-delete-btn > image {
+    height: 20rpx;
+    width: 20rpx;
+    padding: 10rpx;
+    border: 2rpx #F0B27A solid;
+    border-radius: 50%;
+}
+
+/*文字编辑区域*/
+.intr-info-text-item {
+    width: auto;
+    min-height: 240rpx;
+    height: auto;
+    margin: 0 30rpx;
+}
+.intr-info-text-item > textarea {
+    width: 100%;
+    min-height: 240rpx;
+    height: auto;
+    line-height: 1.2;
+}
+/*文字简介字数限制提示*/
+.text-num-notice {
+    width: auto;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    color: #cccccc;
+    text-align: right;
+    margin-bottom: 10rpx;
+    margin-right: 30rpx;
+}
+
+
+/*对选择、拍摄的简介图片进行预览*/
+.intr-info-image-item {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 10rpx;
+}
+.intr-info-image-item > image {
+    width: 100%;
+}
+
+
+/*电脑端编辑提示*/
+.web-site-edit-notice {
+    width: 100%;
+    height: 160rpx;
+    background-color: white;
+    font-size: 26rpx;
+
+}
+.web-site-edit-notice > view {
+    width: auto;
+    height: auto;
+    padding: 20rpx 16rpx;
+    margin: 0 4%;
+    line-height: 1.3;
+    color: #cccccc;
+    background-color: #fafafa;
+}
+.web-site {
+    display: inline-block;
+    color: #F0B27A;
+}
+
+
+/*保存按钮*/
+.update-project-intr-info {
+    width: 100%;
+    height: 120rpx;
+    text-align: center;
+    background-color: white;
+}
+.update-project-intr-info text {
+    width: auto;
+    height: 80rpx;
+    padding: 20rpx 25%;
+    line-height: 80rpx;
+    border-radius: 10rpx;
+    color: white;
+    background-color: #F0B27A;
+}

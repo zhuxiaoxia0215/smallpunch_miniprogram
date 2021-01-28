@@ -1,0 +1,84 @@
+page {
+    height: auto;
+}
+.container {
+    height: auto;
+}
+.project-children-type-navigation {
+    width: 100vw;
+    height: 42px;
+    padding-left: 10px;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+}
+
+.children-label-item {
+    height: 40px;
+    line-height: 40px;
+    width: auto;
+    margin-right: 40px;
+
+    display: inline-block;
+}
+
+/*标识出当前选择的圈子类型*/
+.selected-tab-indicate{
+    width: 16px;
+    height: 3px;
+    /*默认定位到第一个类型选项卡中间*/
+    margin-left: 10px;
+    background-color: #F0B27A;
+}
+
+/*没有该类型的打卡圈子数据提示*/
+.not-punch-card-project {
+    height: auto;
+    width: 100%;
+    margin-top: 50%;
+}
+.not-punch-card-project-notice {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #F0B27A;
+}
+
+.create-punch-card-project-btn {
+    width: 240rpx;
+    height: 60rpx;
+    position: relative;
+    left: 50%;
+    margin-left: -120rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2rpx #F0B27A solid;
+    border-radius: 10rpx;
+
+    font-size: 30rpx;
+    color: #F0B27A;
+}
+.create-punch-card-project-btn > image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+/* 底部*/
+.bottom {
+    width: 100vw;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-bottom: 30rpx;
+    padding-top: 20rpx;
+    text-align: center;
+
+    color: #8a8a8a;
+    font-size: 30rpx;
+}
+
