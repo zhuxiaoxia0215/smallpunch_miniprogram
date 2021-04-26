@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/punchCardCalendar/index",
         "pages/loginAuth/index",
         "pages/find/index",
         "pages/news/index",

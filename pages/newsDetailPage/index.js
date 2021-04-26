@@ -221,14 +221,69 @@ Page({
     // 进入指定的打卡日记详情页
     intoDiaryDetailPage:function (e) {
         console.log(e);
+
+        let that = this;
+
         let diaryId = e.currentTarget.dataset.diaryId;
+        let unread_news_type = that.data.newsType;
+        let recordId = e.currentTarget.dataset.recordId;
+
+        // 设置被评论的消息已读
+        that.setNewsReadStatus(unread_news_type,recordId);
+
         wx.navigateTo({
             url: '/pages/diaryDetailPage/index'
                 + '?diaryId=' + diaryId
         });
     },
 
+    setNewsReadStatus: function(unreadNewsType,recordId) {
+        let that = this;
+        wx.request({
+            url: app.globalData.urlRootPath
+                + 'index/UnreadNewsCount/setNewsReadStatus',
+            method: 'post',
+            data: {
+                user_id: that.data.userInfo.id,
+                unread_news_type: unreadNewsType,
+                record_id: recordId
+            },
+            success: function (res) {
+                 if (res.statusCode === 200) {
 
+                //     that.setData({
+                //         unreadLikeNewsNum: unreadLikeNewsNum,
+                //         unreadCommentNewsNum: unreadCommentNewsNum
+                //     });
+                //     console.log(unreadLikeNewsNum + unreadCommentNewsNum);
+                //     console.log((unreadLikeNewsNum + unreadCommentNewsNum) !== 0);
+
+
+                //     if ((unreadLikeNewsNum + unreadCommentNewsNum) !== 0) {
+                //         // 在小程序tab页右上角设置文本 即未读的消息数
+                //         wx.setTabBarBadge({
+                //             index: 2,
+                //             text: unreadCommentNewsNum + unreadLikeNewsNum + ''
+                //         });
+                //     }
+
+
+                } else {
+                    wx.showToast({
+                        title: respData.errMsg,
+                        icon: 'none'
+                    });
+                }
+            },
+            fail: function () {
+                wx.showToast({
+                    title: '网络异常,无法设置消息已读',
+                    icon: 'none',
+                    duration: 1000
+                })
+            }
+        })
+    }
 
 
 

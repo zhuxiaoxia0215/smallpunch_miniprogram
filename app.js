@@ -48,13 +48,16 @@ App({
       avatar_url: '',
       sex: 0 // 性别 0-未知，1-男性，2-女性
     },
-    urlRootPath: //"http://192.168.100.164:8080",
-    "https://armin-xu.cn/SmallPunchMiniProgramAfterEnd/public/",
+    urlRootPath: "http://42.193.110.241:8088/",
+   // "http://localhost:8080/",
+   //"https://armin-xu.cn/SmallPunchMiniProgramAfterEnd/public/",
     // urlRootPath_local:
     //     "http://myxu.com/EndProject/SmallPunchMiniProgramAfterEnd/public/",
     // urlRootPath: "http://myxu.com/EndProject/SmallPunchMiniProgramAfterEnd/public/",
     // 服务器图片访问BaseURl
-    imgBaseSeverUrl: "https://armin-xu.cn/SmallPunchMiniProgramAfterEnd/"
+    imgBaseSeverUrl: //"https://armin-xu.cn/SmallPunchMiniProgramAfterEnd/"
+    "http://42.193.110.241:8088/uploadFile/"
+    //"http://localhost:8080/uploadFile/"
     // imgBaseSeverUrl: "http://myxu.com/EndProject/SmallPunchMiniProgramAfterEnd/"
 
   }

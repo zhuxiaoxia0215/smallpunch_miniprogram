@@ -131,10 +131,10 @@
         </view>
 
         <!--视频添加按钮-->
-        <view class="btn-list-item video-upload-btn" bindtap="chooseVideo">
+        <!-- <view class="btn-list-item video-upload-btn" bindtap="chooseVideo">
             <image src="../../../images/bottomIcon/video.png">
             </image>
-        </view>
+        </view> -->
 
     </view>
 

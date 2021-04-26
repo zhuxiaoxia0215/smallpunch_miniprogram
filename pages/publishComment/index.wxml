@@ -27,9 +27,9 @@
     <!--TODO 音频评论显示-->
 
     <!--音频评论添加按钮-->
-    <view class="sound-comment-btn">
+    <!-- <view class="sound-comment-btn">
         <image src="/images/bottomIcon/sound.png"></image>
-    </view>
+    </view> -->
 
     <!--评论提交按钮-->
 

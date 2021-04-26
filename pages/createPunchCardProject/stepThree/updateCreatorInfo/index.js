@@ -98,7 +98,7 @@ Page({
                     + "index/PunchCardProject/updateCreatorInfo",
                 method: "post",
                 data:{
-                    project_id: that.data.projectId,
+                    project_id: parseInt(that.data.projectId),
                     creator_introduce: that.data.creatorIntrInfo,
                     weixin_num: that.data.creatorWeiXinNum
                 },

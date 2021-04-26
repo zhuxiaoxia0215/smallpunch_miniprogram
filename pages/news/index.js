@@ -144,58 +144,58 @@ Page({
     // 当点击进入被点赞、被评论的消息列表时，设置该用户未读的被点赞、被评论
     // 消息数为0
     setNewsReadStatus: function(unreadNewsType) {
-        let that = this;
-        wx.request({
-            url: app.globalData.urlRootPath
-                + 'index/UnreadNewsCount/setNewsReadStatus',
-            method: 'post',
-            data: {
-                user_id: that.data.userInfo.id,
-                unread_news_type: unreadNewsType
-            },
-            success: function (res) {
-                if (res.statusCode === 200) {
-                    let unreadLikeNewsNum = that.data.unreadLikeNewsNum;
-                    let unreadCommentNewsNum = that.data.unreadCommentNewsNum;
+        // let that = this;
+        // wx.request({
+        //     url: app.globalData.urlRootPath
+        //         + 'index/UnreadNewsCount/setNewsReadStatus',
+        //     method: 'post',
+        //     data: {
+        //         user_id: that.data.userInfo.id,
+        //         unread_news_type: unreadNewsType
+        //     },
+        //     success: function (res) {
+        //         if (res.statusCode === 200) {
+        //             let unreadLikeNewsNum = that.data.unreadLikeNewsNum;
+        //             let unreadCommentNewsNum = that.data.unreadCommentNewsNum;
 
-                    if (unreadNewsType === 'likeNews')
-                        unreadLikeNewsNum = 0;
-                    if (unreadNewsType === 'commentNews')
-                        unreadCommentNewsNum = 0;
-
-
-                    that.setData({
-                        unreadLikeNewsNum: unreadLikeNewsNum,
-                        unreadCommentNewsNum: unreadCommentNewsNum
-                    });
-                    console.log(unreadLikeNewsNum + unreadCommentNewsNum);
-                    console.log((unreadLikeNewsNum + unreadCommentNewsNum) !== 0);
+        //             if (unreadNewsType === 'likeNews')
+        //                 unreadLikeNewsNum = 0;
+        //             if (unreadNewsType === 'commentNews')
+        //                 unreadCommentNewsNum = 0;
 
 
-                    if ((unreadLikeNewsNum + unreadCommentNewsNum) !== 0) {
-                        // 在小程序tab页右上角设置文本 即未读的消息数
-                        wx.setTabBarBadge({
-                            index: 2,
-                            text: unreadCommentNewsNum + unreadLikeNewsNum + ''
-                        });
-                    }
+        //             that.setData({
+        //                 unreadLikeNewsNum: unreadLikeNewsNum,
+        //                 unreadCommentNewsNum: unreadCommentNewsNum
+        //             });
+        //             console.log(unreadLikeNewsNum + unreadCommentNewsNum);
+        //             console.log((unreadLikeNewsNum + unreadCommentNewsNum) !== 0);
 
 
-                } else {
-                    wx.showToast({
-                        title: respData.errMsg,
-                        icon: 'none'
-                    });
-                }
-            },
-            fail: function () {
-                wx.showToast({
-                    title: '网络异常,无法设置消息已读',
-                    icon: 'none',
-                    duration: 1000
-                })
-            }
-        })
+        //             if ((unreadLikeNewsNum + unreadCommentNewsNum) !== 0) {
+        //                 // 在小程序tab页右上角设置文本 即未读的消息数
+        //                 wx.setTabBarBadge({
+        //                     index: 2,
+        //                     text: unreadCommentNewsNum + unreadLikeNewsNum + ''
+        //                 });
+        //             }
+
+
+        //         } else {
+        //             wx.showToast({
+        //                 title: respData.errMsg,
+        //                 icon: 'none'
+        //             });
+        //         }
+        //     },
+        //     fail: function () {
+        //         wx.showToast({
+        //             title: '网络异常,无法设置消息已读',
+        //             icon: 'none',
+        //             duration: 1000
+        //         })
+        //     }
+        // })
     },
 
     // 点击评论消息进入 消息详情页展示所有的评论消息列表

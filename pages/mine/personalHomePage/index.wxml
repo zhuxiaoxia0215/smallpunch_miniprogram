@@ -39,50 +39,7 @@
             {{visitedUserInfo.nick_name}}
         </view>
 
-        <!-- 关注|粉丝 -->
-        <view class="followAndFollower">
-            <!-- 关注 -->
-            <view class="myFollowNum">
-                关注 500000               <!--TODO 关注人数动态获取-->
-            </view>
-
-            <!-- 分隔符 -->
-            <view class="decollator">|</view>
-
-            <!-- 粉丝 -->
-            <view class="myFollowerNum">
-                粉丝 500000               <!--TODO 粉丝人数动态获取-->
-            </view>
-        </view>
-
-        <!-- 个人标签：身份标签 & 兴趣标签 & 添加表按钮（自己进入才显示）-->
-        <view class="personalLabel">
-            <!-- 遍历打印个人标签数据 -->
-            <block wx:if="{{personalLabelLists}}">
-                <block wx:for="{{personalLabelLists}}">
-                    <view class="minLabelItem">
-                        {{item}}
-                    </view>
-                </block>
-
-                <!-- 小号添加按钮 -->
-                <block wx:if="{{isMyself}}">
-                    <view class="minLabelItem">
-                        <image src="/images/button/add.png"></image>
-                        <text>添加</text>
-                    </view>
-                </block>
-
-            </block>
-            <block wx:else>
-                <!-- 大号的添加按钮 -->
-                <block wx:if="{{isMyself}}">
-                    <view class="maxLabelItem">
-                        <image src="/images/button/add.png"></image>添加你的标签
-                    </view>
-                </block>
-            </block>
-        </view>
+  
 
         <!-- 个人主页访客记录: 访客人数 & 最近访问的五个人头像 & 详细访问记录页面入口 -->
         <block wx:if="{{visitedUserInfo.personal_page_visit_num > 0}}">

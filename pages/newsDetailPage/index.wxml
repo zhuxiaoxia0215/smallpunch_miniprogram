@@ -18,7 +18,7 @@
             <!-- 显示日记被点赞的记录列表-->
             <block wx:for="{{myLikedList}}">
                 <view class="liked-news-list-item" bindtap="intoDiaryDetailPage"
-                      data-diary-id="{{item.diary_id}}">
+                      data-diary-id="{{item.diary_id}}" data-record-id="{{item.id}}">
                     <view class="admirer-avatar"
                           catchtap="intoPersonalHomePage"
                           data-user-id="{{item.admirer.id}}">
@@ -49,7 +49,7 @@
             <!-- 显示r日记被评论的记录列表-->
             <block wx:for="{{myCommentedList}}">
                 <view class="commented-news-list-item" bindtap="intoDiaryDetailPage"
-                      data-diary-id="{{item.diary_id}}">
+                      data-diary-id="{{item.diary_id}}" data-record-id="{{item.id}}">
                     <view class="reviewer-avatar"
                           catchtap="intoPersonalHomePage"
                           data-user-id="{{item.reviewer.id}}">
@@ -61,7 +61,7 @@
                         </block>
                     </view>
                     <view class="comment-info-area" style="width: {{windowWidth - 70}}px;">
-                        <view class="comment-info">
+                        <view class="comment-info" >
                             <view class="comment-user-info">
                                 <view class="reviewer-nick-name"
                                       catchtap="intoPersonalHomePage"

@@ -253,7 +253,7 @@ Page({
                 + 'index/PunchCardDiary/getDiaryDetailInfoById',
             method: 'post',
             data: {
-                diaryId: diaryId,
+                diaryId: parseInt(diaryId),
                 visitorId: app.globalData.userInfo.id // 当前访问者用户id
             },
             success: function (res) {

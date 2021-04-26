@@ -713,16 +713,25 @@ Page({
     },
 
     // 进入个人的打卡日历详情页面
-    intoPunchCardCalendarDetailPage: function() {
+    intoPunchCardCalendarDetailPage: function(e) {
+        console.log(e);
+        let userId = parseInt(e.currentTarget.dataset.userId);
+        let projectId = parseInt(e.currentTarget.dataset.projectId);
+
+        wx.navigateTo({
+            url: '../punchCardCalendar/index'
+                + '?userId=' + userId + '&projectId=' +projectId
+        });
+
         // let that = this;
         // wx.navigateTo({
         //     url: '/pages/projectBackStageManage/index'
         //         + '?projectId='+ that.data.projectId
         //         + '&projectName='+ that.data.projectInfo.project_name
         // });
-        wx.showToast({
-            title: 'todo'
-        });
+        // wx.showToast({
+        //     title: 'todo'
+        // });
     },
 
 
@@ -1393,10 +1402,10 @@ Page({
 
     // 进入搜索成员页面
     intoSearchAttendUserPage: function() {
-      wx.showToast({
-          title: 'TODO',
-          icon: 'none'
-      })
+    //   wx.showToast({
+    //       title: 'TODO',
+    //       icon: 'none'
+    //   })
     },
 
     // 返回首页

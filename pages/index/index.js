@@ -393,9 +393,9 @@ Page({
             success: function(res) {
                 if (res.code) {
                     wx.request({
-                        url: "http://192.168.100.164:8080/index/user/getOpenId",
-                        //app.globalData.urlRootPath +
-                          // 'index/user/getOpenId',
+                        url: //"http://localhost:8080/index/user/getOpenId",
+                        app.globalData.urlRootPath +
+                           'index/user/getOpenId',
                         //'user/login',
                        
                         data: {

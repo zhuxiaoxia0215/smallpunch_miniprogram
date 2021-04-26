@@ -153,11 +153,11 @@ Page({
       isMyself: that.data.isMyself,
       userInfo: app.globalData.userInfo,
       //TODO 动态获取个人标签数据
-      personalLabelLists: [
-        '小学生', '大学生', '外语', '阅读',
-        '托福雅思', '国学', '亲子幼教',
-        '考院', '音乐', '绘画', '运动健身'
-      ],
+      // personalLabelLists: [
+      //   '小学生', '大学生', '外语', '阅读',
+      //   '托福雅思', '国学', '亲子幼教',
+      //   '考院', '音乐', '绘画', '运动健身'
+      // ],
       // TODO 动态获取最新五个访客的头像地址
       latestFiveUserAvatarList: [
         app.globalData.userInfo.avatar_url,

@@ -60,9 +60,9 @@
     </scroll-view>
 
     <!--导航条 目前只有推荐日记功能-->
-    <view class="navigation-bar-container {{navigationBarFix}}">
+  <view class="navigation-bar-container {{navigationBarFix}}">
       <view class="navigation-bar">
-        <view class="navigation-bar-item" bindtap="showFollowRecommendView">
+        <!-- <view class="navigation-bar-item" bindtap="showFollowRecommendView">
           <block wx:if="{{showFollowRecommendView}}">
             <text style="color: black">关注</text>
           </block>
@@ -78,12 +78,12 @@
           <block wx:else>
             <text>推荐</text>
           </block>
-        </view>
+        </view> -->
       </view>
 
       <!--标识出当前选择的选项卡 默认为日记-->
-      <view class="selected-tab-indicate" animation="{{animation}}">
-      </view>
+      <!-- <view class="selected-tab-indicate" animation="{{animation}}">
+      </view> -->
 
       <view class="separator-height-1px" style="margin-top: 2px"></view>
     </view>

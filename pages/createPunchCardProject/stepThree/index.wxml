@@ -155,11 +155,11 @@
                         <image src="../../../images/button/add.png"></image>
                         <text>丰富圈子介绍，让更多人了解你的圈子</text>
                     </view>
-                    <view class="edit-project-intr-activity-notice">
+                    <!-- <view class="edit-project-intr-activity-notice">
                         <image src="../../../images/bottomIcon/gold.png"></image>
-                        <!--TODO 添加圈子介绍送20金币功能-->
+                        
                         <text>限时活动: 填写介绍送20金币</text>
-                    </view>
+                    </view> -->
                 </view>
                 <view style="width: 100%;height: 1px"></view>
             </block>
@@ -216,7 +216,7 @@
         </view>
 
         <!--设置报名费&分销佣金：报名费为成员加入缴纳的费用，归圈主所有-->
-        <view class="set-project-attend-cost" bindtap="setProjectAttendCost">
+        <!-- <view class="set-project-attend-cost" bindtap="setProjectAttendCost">
             <view class="set-project-attend-cost-header">
                 <view class="title">设置报名费与分销佣金</view>
                 <view class="notice">报名费是成员加入时缴纳的费用，归圈主所有</view>
@@ -225,10 +225,10 @@
             <view class="set-project-attend-cost-btn">
                 <image src="../../../images/button/into_btn_gray.png"></image>
             </view>
-        </view>
+        </view> -->
 
         <!--创建契约金：圈主设置目标，参与者上交契约金，完成打卡分奖金-->
-        <view class="set-punch-card-money-award" bindtap="setPunchCardMoneyAward">
+        <!-- <view class="set-punch-card-money-award" bindtap="setPunchCardMoneyAward">
             <view class="set-punch-card-money-award-header">
                 <view class="title">创建契约金</view>
                 <view class="notice">圈主设置目标，参与者上交契约金，完成打卡分奖金</view>
@@ -237,8 +237,8 @@
             <view class="set-punch-card-money-award-btn">
                 <image src="../../../images/button/into_btn_gray.png"></image>
             </view>
-        </view>
-    </scroll-view>
+        </view>-->
+    </scroll-view> 
 
     <!--分享按钮、进入打卡详情页-->
     <view class="btn-group">
