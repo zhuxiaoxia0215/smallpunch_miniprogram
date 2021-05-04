@@ -31,7 +31,7 @@
             <!-- 每个月份的有数字的单元格 -->
             <view class='cell' wx:else>
               <!-- 当前日期已签到 -->
-              <view wx:if="{{days[j+k].isSign == true}}" style='background-color:#83C75D' class='cell'>
+              <view wx:if="{{days[j+k].isSign == true}}" style='background-color:#FF9900' class='cell'>
                 <text>{{days[j+k].date}}</text>
               </view>
               <!-- 当前日期未签到 -->

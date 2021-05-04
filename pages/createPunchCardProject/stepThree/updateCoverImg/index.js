@@ -192,8 +192,7 @@ Page({
                 filePath: that.data.tempFilePaths,
                 name: "image",
                 formData: {
-                    // 若修改前使用的是推荐封面背景图，则在修改时要设置其被使用数-1,因此需要pre~Id
-                    preSysRecommendCoverImgId: that.data.sysRecommendCoverImgId,
+
                     curCoverImgUrl: that.data.curCoverImgUrl,
                     projectId: parseInt(that.data.projectId)
                 },

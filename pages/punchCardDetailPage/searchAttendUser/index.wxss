@@ -1,0 +1,141 @@
+/* pages/punchCardDetailPage/searchAttendUser/index.wxss */
+.search-input-container {
+  width: 100vw;
+  height: auto;
+}
+.search-bar-fix {
+  position: fixed;
+  top: 0;
+         }
+.weui-search-bar {
+  border-bottom: 1px solid white;
+}
+
+.search-result-list {
+  width: auto;
+  height: auto;
+  /*margin-top: 47px;*/
+}
+
+/* 底部*/
+.bottom {
+  width: 100vw;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 15px;
+  padding-top: 20rpx;
+  text-align: center;
+
+  color: #8a8a8a;
+  font-size: 30rpx;
+}
+
+/*展示加入的成员信息：头像、昵称、加入时间、性别*/
+.attend-user-list {
+  width: auto;
+  height: auto;
+  margin: 0 20rpx;
+  padding-bottom: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.attend-user-list-item {
+  width: 100%;
+  height: 120rpx;
+  border-bottom: 2rpx #e5e5e5 solid;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.user-avatar {
+  width: 15%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.user-avatar > image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+/*性别*/
+.user-sex-male{
+  width: 34rpx;
+  height: 34rpx;
+
+  border-radius: 50%;
+  background-color: white;
+
+  position: relative;
+  left: -30rpx;
+  bottom: -20rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-sex-male > image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.user-sex-female {
+  width: 34rpx;
+  height: 34rpx;
+
+  border-radius: 50%;
+  background-color: white;
+
+  position: relative;
+  left: -30rpx;
+  bottom: -20rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.user-sex-female > image{
+  width: 30rpx;
+  height: 30rpx;
+  transform: rotate(30deg);
+}
+.user-sex-unknown {
+  width: 34rpx;
+  height: 34rpx;
+}
+/*用户昵称*/
+.user-nick-name {
+  width: 55%;
+  font-size: 30rpx;
+  color: black;
+}
+.attend-time {
+  width: 27%;
+  /* height: 100rpx;  */
+  text-align: right;
+  line-height: 50rpx;
+  font-size: 22rpx;
+  color: #8a8a8a;
+}
+
+.delete-user {
+
+  width: 60rpx;
+  height: 30rpx;
+  padding: 2rpx 4;
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  line-height: 180rpx;
+  color: #F0B27A;
+  border-radius: 6rpx;
+  border: 1rpx #F0B27A solid;
+}

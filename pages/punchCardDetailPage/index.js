@@ -998,9 +998,65 @@ Page({
 
     // 投诉打卡日记
     complainDiary: function(e) {
-        wx.showToast({
-            title: 'TODO'
-        })
+        console.log(e);
+        let that = this;
+        let diaryIndex = e.currentTarget.dataset.diaryIndex;
+        let userId = that.data.userInfo.id;
+        wx.showModal({
+            title: '温馨提示',
+            content: '确认要投诉？',
+            confirmText: '确认投诉',
+            confirmColor: '#E53935',
+            success: function (res) {
+                // 关闭更多按钮模态框
+                that.closeDiaryOperateBtn();
+
+                // 确认删除
+                if (res.confirm) {
+                    wx.request({
+                        url: app.globalData.urlRootPath
+                            + 'index/PunchCardDiary/complainDiaryById',
+                        method: 'post',
+                        data: {
+                            projectId: that.data.projectId,
+                            diaryId: that.data.punchCardDiaryList[diaryIndex].id,
+                            publisherId: that.data.punchCardDiaryList[diaryIndex].publisher.id,
+                            userId: userId
+                        },
+                        success: function (res) {
+                            console.log(res);
+                            let data = res.data;
+                            switch (res.statusCode) {
+                                case 200:
+                                    // 删除本地该条打卡日记
+                                    // that.data.punchCardDiaryList.splice(diaryIndex,1);
+                                    // that.setData({
+                                    //     punchCardDiaryList: that.data.punchCardDiaryList
+                                    // });
+                                    wx.showToast({
+                                        title: "投诉成功",
+                                        icon: 'none',
+                                        duration: 2000
+                                    });
+                                    break;
+                                default:
+                                    wx.showToast({
+                                        title: data.errMsg,
+                                        icon: 'none',
+                                        duration: 2000
+                                    });
+                                    break;
+                            }
+                        },
+                        fail: function () {
+                            wx.showToast({
+                                title: '网络异常!'
+                            });
+                        }
+                    });
+                }
+            }
+        });
     },
 
 
@@ -1402,6 +1458,12 @@ Page({
 
     // 进入搜索成员页面
     intoSearchAttendUserPage: function() {
+        let that = this;
+        console.log(that.data.projectId);
+        wx.navigateTo({
+            url: './searchAttendUser/index' 
+            + '?projectId=' + that.data.projectId
+        })
     //   wx.showToast({
     //       title: 'TODO',
     //       icon: 'none'

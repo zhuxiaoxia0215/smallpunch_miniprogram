@@ -102,7 +102,7 @@ Page({
         wx.request({
             url: app.globalData.urlRootPath + "index/PunchCardProject/getProjectIntr",
             data:{
-                project_id: that.data.punchCardProjectId
+                project_id: parseInt(that.data.punchCardProjectId)
             },
             method: "post",
             success:function (response) {

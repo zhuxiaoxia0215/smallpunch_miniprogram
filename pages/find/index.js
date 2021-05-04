@@ -6,6 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        userInfo: '',
         showLoading: true, // 在未从服务器端获取到需要的数据之前则显示加载动画&&空白页面
         hiddenLoadingMore: true, // 触发上拉事件时控制显示、隐藏加载更多
         haveMore: true, // 控制显示、隐藏 没有更多数据提示信息
@@ -44,7 +45,7 @@ Page({
      */
     onLoad: function () {
         let that = this;
-
+        that.data.userInfo = app.globalData.userInfo;
         wx.showLoading({
             title: '加载中...'
         });
@@ -270,7 +271,8 @@ Page({
             method: 'post',
             data: {
                 nextPage: pageNo,
-                dataNum: that.data.dataNum
+                dataNum: that.data.dataNum,
+                userId: that.data.userInfo.id
             },
             success: function (res) {
                 console.log(res);
