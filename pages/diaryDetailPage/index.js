@@ -633,11 +633,11 @@ Page({
             url: app.globalData.urlRootPath + 'index/DiaryComment/addComment',
             method: 'post',
             data: {
-                diary_id: that.data.diaryId,
-                pid: that.data.pid,
-                reviewer_id: app.globalData.userInfo.id, // 评论者id
+                diary_id: parseInt(that.data.diaryId),
+                pid: parseInt(that.data.pid),
+                reviewer_id: parseInt(app.globalData.userInfo.id), // 评论者id
                 text_comment: that.data.commentText,
-                respondent_id: that.data.respondentId // 被评论者id
+                respondent_id: parseInt(that.data.respondentId) // 被评论者id
             },
             success: function (res) {
                 console.log(res);
