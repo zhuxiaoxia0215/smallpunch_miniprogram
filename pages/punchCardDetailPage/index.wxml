@@ -1,10 +1,3 @@
-<!--
-说明：打卡详情页根据所进入的用户的角色进行区分显示
-1.若是圈主进入打卡详情页显示进入管理后台的按钮
-2.若是管理员进入显示进入管理后台的按钮、显示是否已关注圈主的相关信息
-3.若是普通参与成员进入不显示管理后台按钮、显示是否关注圈主的相关信息
-4.未加入打卡圈子的用户进入
--->
 <!--suppress ALL -->
 <view class="container">
   <!--在未从服务器端获取到数据之前显示空白页并显示加载动画-->
@@ -512,36 +505,10 @@
 
         <!--底部按钮：收藏、申请参加、举报按钮-->
         <view class="container-not-join-in-pro-footer">
-          <!--收藏按钮-->
-          <view class="not-join-in-project-collect-btn"
-                bindtap="dealCollect">
-            <block wx:if="{{haveCollect}}">
-              <image src="../../images/bottomIcon/collect-fill-btn.png">
-              </image>
-              <text>已收藏</text>
-            </block>
-            <block wx:else>
-              <image src="../../images/bottomIcon/collect-btn.png">
-              </image>
-              <text>收藏</text>
-            </block>
-          </view>
           <!--申请加入-->
           <view class="not-join-in-project-attend-btn"
                 bindtap="attendPunchCardProject">
             立即参加
-          </view>
-
-          <!--举报按钮-->
-          <view class="not-join-in-project-report-btn"
-                bindtap="showReportBtn">
-            <image src="../../images/bottomIcon/more.png">
-            </image>
-            <!--弹出举报按钮-->
-            <view class="report-btn" hidden="{{hiddenReportBtn}}"
-                  bindtap="reportPunchCardProject">
-              举报该圈子
-            </view>
           </view>
         </view>
       </view>
@@ -568,8 +535,14 @@
             <!--对创建者显示修改封面图按钮-->
             <block wx:if="{{isCreator == 1}}">
               <view class="update-project-cover-img-btn"
-                    bindtap="updateProjectCoverImg">
-                修改
+                    bindtap="deleteProject" data-user-id="{{userInfo.id}}" data-project-id="{{projectId}}">
+                删除
+              </view>
+            </block>
+            <block wx:else>
+              <view class="update-project-cover-img-btn"
+                    bindtap="exitProject" data-user-id="{{userInfo.id}}" data-project-id="{{projectId}}">
+                退出
               </view>
             </block>
           </view>
@@ -664,28 +637,10 @@
 
               <!--对当前非圈子创建者的用户（1为创建者）显示其与创建者的关注按钮 & 私信按钮-->
               <block wx:if="{{isCreator != 1}}">
-                <!--TODO 关注情况-->
-                <!-- <view class="user-follow-info" bindtap="dealUserFollow">
-                  <text>关注</text>
-                </view> -->
-                <!--私信-->
-                <!-- <view class="contact-creator" bindtap="contactCreator">
-                  <text>发私信</text>
-                </view> -->
               </block>
             </view>
           </view>
         </view>
-
-        <!--创建者显示管理后台按钮-->
-        <!-- <block wx:if="{{isCreator === 1}}">
-          <view class="back-stage-management-page-into-btn"
-                bindtap="intoProjectBackStageManage">
-            <image src="/images/button/back_setting.png">
-            </image>
-            <text>管理后台</text>
-          </view>
-        </block> -->
 
         <view class="back-stage-management-page-into-btn"
                 bindtap="intoPunchCardCalendarDetailPage" data-user-id="{{userInfo.id}}" data-project-id="{{projectId}}">
@@ -693,28 +648,6 @@
             </image>
             <text>打卡日历</text>
           </view>
-
-        <!--通用的功能入口列表：打卡日历、排行&勋章、设置、邀请好友-->
-        <!-- <view class="universal-function-list">    
-          <view class="list-item" bindtap="intoPunchCardCalendarDetailPage" data-user-id="{{userInfo.id}}" data-project-id="{{projectId}}">
-            <image src="/images/button/calendar.png"></image>
-            <text>打卡日历</text>
-          </view>
-
-          <view class="list-item" bindtap="intoPunchCardArrangePage">
-            <image src="/images/button/honour.png"></image>
-            <text>排行&勋章</text>
-          </view>
-
-          <view class="list-item" bindtap="intoProjectBaseSettingPage">
-            <image src="/images/button/setting-black.png"></image>
-            <text>设置</text>
-          </view>
-          <view class="list-item" bindtap="inviteFriends">
-            <image src="/images/button/invite.png"></image>
-            <text>邀请好友</text>
-          </view>
-        </view> -->
       </view>
 
       <view class="separator-height-10px"></view>
@@ -759,14 +692,6 @@
 
         <!--当选择日记选项卡的时候显示成员的打卡日记列表-->
         <view class="user-punch-card-diary-list" hidden="{{hiddenDiaryInfo}}">
-          <!--日记展示筛选器-->
-        <!--   <block wx:if="{{isCreator == 1}}">
-            <view class="punch-card-diary-filter-btn">
-              <view class="punch-card-num-today-num">
-                今日已打卡: 0 人
-              </view> 
-            </view>
-          </block>-->
 
           <!--日记列表展示-->
           <block wx:if="{{showDiaryListLoading}}">
@@ -997,14 +922,6 @@
                           <image src="/images/button/share_btn.png"></image>
                           <text>分享</text>
                         </button>
-
-                        <!--点评-->
-                        <!-- <block wx:if="{{isCreator == 1}}">
-                          <view class="remark-diary-btn">
-                            <image src="/images/button/remark.png"></image>
-                            <text>点评</text>
-                          </view>
-                        </block> -->
                       </view>
 
                       <!-- 点赞用户展示，只展示服务器返回前十个用户昵称以及总赞数 -->
@@ -1214,35 +1131,6 @@
                   圈主
                 </view>
               </view>
-
-              <!--TODO 加圈主微信-->
-              <!-- <block wx:if="{{creatorInfo.weChat != ''}}">
-                <block wx:if="{{isCreator != 1}}">
-                  <view class="get-creator-we-chat">
-                    <text>加微信</text>
-                  </view>
-                </block>
-              </block>
-              <block wx:else> -->
-                <!--只是设置了背景颜色为空白进行隐藏，实际上加微信按钮还是存在的
-                因此这里不能绑定事件-->
-                <!-- <block wx:if="{{isCreator != 1}}">
-                  <view class="get-creator-we-chat"
-                        style="background-color: white">
-                    <text>加微信</text>
-                  </view>
-                </block> 
-
-              </block>-->
-
-              <!--对圈子成员显示给圈主发私信的按钮-->
-              <!-- <block wx:if="{{isCreator != 1}}">
-                <view class="send-message-to-creator">
-                  <image src="../../images/button/mail.png"></image>
-                  <text>发私信</text>
-                </view>
-              </block> -->
-
             </view>
 
             <view class="creator-intr-content">

@@ -6,6 +6,7 @@ Page({
    */
   data: {
     projectId: 0,
+    isCreator: 1,
     inputShowed: true,
     inputVal: "",
 
@@ -17,6 +18,7 @@ Page({
     showSearchLoading: false, // 搜索加载动画
     moreSearchDataLoad: false, // 控制上拉加载更多符合搜索关键字的打卡圈子数据的加载动画
     notMoreSearchData: false, // 符合条件的打卡圈子已全部加载标志
+    showDelete: false,
 
     scrollTimer: '',
     scrollArr: '',
@@ -30,7 +32,10 @@ Page({
   onLoad: function (options) {
     console.log(options);
     let that = this;
-    that.data.projectId = parseInt(options.projectId);
+    that.setData({
+      projectId: parseInt(options.projectId),
+      isCreator: parseInt(options.isCreator),
+  });
   },
 
   // 进入搜素输入状态
@@ -115,7 +120,7 @@ Page({
             showSearchLoading: false
           });
           wx.showToast({
-            title: '没有符合的打卡圈子',
+            title: '没有符合的用户',
             icon: 'none',
             duration: 2000
           });
@@ -270,7 +275,6 @@ Page({
                         switch (res.statusCode) {
                             case 200:
                                     // 删除本地该条打卡日记
-                                    that.data.attendUserList.splice(diaryIndex,1);
                                     that.setData({
                                       attendUserList: that.data.attendUserList
                                     });

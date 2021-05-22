@@ -259,7 +259,7 @@ Page({
                 uploadTask[index++] = new Promise(function (resolve) {
                     wx.uploadFile({
                         url: app.globalData.urlRootPath
-                            + "index/PunchCardProject/addProjectIntr",
+                            + "index/PunchCardProject/addProjectIntrImg",
                         filePath: newProjectIntrInfo[i].content,
                         name: "images",
                         formData: {
@@ -285,7 +285,7 @@ Page({
                         method: "post",
                         data: {
                             project_id: parseInt(that.data.projectId),
-                            order: parseInt(newProjectIntrInfo[i].order),
+                            order: 1,
                             type: parseInt(newProjectIntrInfo[i].type),
                             content: newProjectIntrInfo[i].content
                         },

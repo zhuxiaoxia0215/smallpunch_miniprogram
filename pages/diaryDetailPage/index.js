@@ -12,45 +12,6 @@ Page({
 
         diaryId: 0, // 打卡日记id编号
         diaryInfo: {
-            // 属性说明
-            // "id": "id编号",
-            // "text_content": "日记内容",
-            // "punch_card_time": "2018-10-24 21:35",
-            // "punch_card_address": "北郊蓬江区人民政府(建设二路东)",
-            // "address_longitude": "113.078450", // 经度
-            // "address_latitude": "22.595140",   // 纬度
-            // "like_user_num": "1",
-            // "comment_num": "2",
-            // "curr_diary_punch_card_day_num": "2", // 已坚持打卡天数
-            // "projectInfo": {
-            //     "id": "720",
-            //     "project_name": "每天坚持跑步",
-            //     "cover_img_url": "图片地址"
-            // },
-            // "existAttendProject": true, // 当前访问者是否加入了该日记所属圈子
-            // "haveLike": true, // 当前用户是否对该日记进行了点赞
-            // "likeRecordId": 92, // 点赞记录id
-            // "diaryResource": [{
-            //     "id": "57",
-            //     "resource_url": "资源文件地址",
-            //     "type": "1"
-            // }],
-            // // 日记发表者信息
-            // "publisher": {"id": "8", "avatar_url": "default_avatar", "nick_name": "徐茂勇", "sex": "2"},
-            // // 点赞记录信息
-            // "allLikeInfo": [{"id": "92", "admirer": {"id": "1", "avatar_url": "头像地址"}}],
-            // "allCommentInfo": [{
-            //     "id": "30",
-            //     "diary_id": "24",
-            //     "pid": "0",
-            //     "text_comment": "测试",
-            //     "sound_comment": "",
-            //     "create_time": "2019-05-07 17:03:53",
-            //     // 评论者信息
-            //     "reviewer": {"id": "1", "avatar_url": "头像地址", "nick_name": "MYXuu", "sex": "1"},
-            //     // 被评论者信息
-            //     "respondent": {"id": "8", "avatar_url": "default_avatar", "nick_name": "徐茂勇", "sex": "2"}
-            // }]
         },
 
         userInfo: '', // 当前小程序使用者信息

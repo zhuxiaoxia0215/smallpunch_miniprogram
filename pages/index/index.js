@@ -31,38 +31,6 @@ Page({
         diaryImgWidth: Math.floor((app.globalData.windowWidth-(15 * 2 + 5 * 3)) / 3),
 
         recommendDiaryList: [
-            // 属性值说明
-            // {
-            //     id: '打卡日记记录id',
-            //     text_content: '打卡日记文本内容',
-            //     punch_card_time: '打卡时间',
-            //     punch_card_address: '打卡地理位置信息',
-            //     address_longitude: '经度',
-            //     address_latitude: '纬度',
-            //     like_user_num: 点赞总人数
-            //     comment_num: 评论总数
-            //     haveLike: 当前小程序使用者对本条日记的点赞情况 true已点赞 false未点赞
-            //     likeRecordId: 当前小程序用户对本条打卡日记点赞记录的ID号
-            //     punchCardProject: {
-            //         id: 0,// 日记所属的打卡圈子的圈子编号
-            //         project_name:'圈子名称',
-            //         cover_img_url: '圈子封面图片url'
-            //     },
-            //     publisher: {
-            //         id: 0,// 日记发表者userId
-            //         sex:'0--未知 1--男性 2--女性',
-            //         nick_name:'',
-            //         avatar_url: ''
-            //     },
-            //     diaryResource:{
-            //         id: '打卡日记相关的资源文件记录id',
-            //         resource_url: '资源文件路径信息',
-            //         type: '1-图片 2-音频 3-视频'
-            //     },
-            //     recentThreeAttendUserList: {
-            //         avatar_url: ''
-            //     }
-            // }
         ], // 推荐的打卡日记数据列表
         pageNo: 1,              // 已经加载的日记数据页码
         dataNum: 5,             // 每一页包含的日记条数
@@ -393,9 +361,9 @@ Page({
             success: function(res) {
                 if (res.code) {
                     wx.request({
-                        url: "http://localhost:8080/index/user/getOpenId",
-                       // app.globalData.urlRootPath +
-                         //  'index/user/getOpenId',
+                        url: //"http://localhost:8080/index/user/getOpenId",
+                        app.globalData.urlRootPath +
+                           'index/user/getOpenId',
                         //'user/login',
                        
                         data: {

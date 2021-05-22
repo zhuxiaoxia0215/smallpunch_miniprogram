@@ -363,6 +363,7 @@ Page({
                 + 'index/PunchCardProject/getProjectListByRecommend',
             method: 'post',
             data: {
+                userId: app.globalData.userInfo.id,
                 nextPage: pageNo,
                 dataNum: pageSize
             },

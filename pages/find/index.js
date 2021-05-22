@@ -1,4 +1,4 @@
-let app = getApp();
+  let app = getApp();
 
 Page({
 
@@ -23,15 +23,6 @@ Page({
 
         // 当前已经获取到的打卡圈子推荐列表数据
         punchCardProjectRecommendList: [
-            // {
-            //     id: 1,
-            //     cover_img_url: 'default_cover_img',
-            //     project_name: '项目名1',
-            //     all_punch_card_num: 9999,
-            //     attend_user_num: 99999,
-            //     // TODO 参与打卡圈子报名费
-            //
-            // },
         ],
 
         currPageNo: 1, // 打卡圈子推荐列表当前页 用于上拉获取下一页数据

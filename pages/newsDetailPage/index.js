@@ -31,19 +31,6 @@ Page({
         ],
 
         myCommentedList:[
-            // 属性说明
-            // {
-            //     "id": 55, // 评论id
-            //     "diary_id": 45, // 所属日记id
-            //     "respondent_id": 1, // 被评论者用户id 也是当前用户id
-            //     "text_comment": "检测他人评论自己是否发送未读评论消息2", // 评论内容
-            //     "create_time": "2019-05-11 14:55:39", // 评论时间
-            //     "reviewer": { // 评论者信息
-            //         "id": 9, // 用户id
-            //         "avatar_url": "",// 用户头像地址
-            //         "nick_name": "李圣英" // 昵称
-            //     }
-            // }
         ],
     },
 
@@ -250,23 +237,6 @@ Page({
             },
             success: function (res) {
                  if (res.statusCode === 200) {
-
-                //     that.setData({
-                //         unreadLikeNewsNum: unreadLikeNewsNum,
-                //         unreadCommentNewsNum: unreadCommentNewsNum
-                //     });
-                //     console.log(unreadLikeNewsNum + unreadCommentNewsNum);
-                //     console.log((unreadLikeNewsNum + unreadCommentNewsNum) !== 0);
-
-
-                //     if ((unreadLikeNewsNum + unreadCommentNewsNum) !== 0) {
-                //         // 在小程序tab页右上角设置文本 即未读的消息数
-                //         wx.setTabBarBadge({
-                //             index: 2,
-                //             text: unreadCommentNewsNum + unreadLikeNewsNum + ''
-                //         });
-                //     }
-
 
                 } else {
                     wx.showToast({

@@ -99,6 +99,6 @@
 
     <!-- 底线  -->
     <view class="bottom" hidden="{{!notMoreData}}">
-        ——· 我也是有顶线的哦 ·——
+        ——· 我也是有底线的哦 ·——
     </view>
 </view>

@@ -9,8 +9,6 @@ Page({
         // 服务器图片访问BaseURL
         imgRootPath: app.globalData.imgBaseSeverUrl,
         projectId: 0,
-        // 当前圈子使用的系统推荐封面背景图的图片id,0--代表使用的是自定义上传的图片
-        // 或者小程序内置的默认图片images/default/project_cover_img.png
         sysRecommendCoverImgId: 0,
         curCoverImgUrl: '', // 修改前使用的封面图片的路径
         systemRecommendCoverImgList: [
@@ -32,7 +30,6 @@ Page({
         that.data.sysRecommendCoverImgId = parseInt(options.preCoverImgId);
         that.data.curCoverImgUrl = options.curCoverImgUrl;
 
-        this.getSystemRecommendCoverImg();
     },
 
     /**

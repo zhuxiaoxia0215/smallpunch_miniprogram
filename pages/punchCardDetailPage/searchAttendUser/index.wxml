@@ -82,8 +82,10 @@
             <view class="attend-time">
               {{item.pivot.attend_time}}加入
             </view>
-            <view class="delete-user" catchtap="deleteUser"
+          <block wx:if="{{isCreator==1}}">
+          <view class="delete-user" catchtap="deleteUser"
                                   data-user-index="{{index}}">移除</view>
+            </block>
           </view>
         </block>
       </view>

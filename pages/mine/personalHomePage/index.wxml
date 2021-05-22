@@ -13,14 +13,6 @@
                    lazy-load="{{true}}">
             </image>
 
-            <!-- 进入个人主页设置按钮 -->
-            <block wx:if="{{isMyself}}">
-                <view class="intoUserInfoSetBtn">
-                    <image src="/images/button/userInfoSetBtn.png"></image>主页设置
-                </view>
-            </block>
-
-
             <!-- 用户头像 -->
             <block wx:if="{{visitedUserInfo.avatar_url == 'default_avatar'}}">
                 <!--使用默认的小程序内置的默认头像-->
@@ -177,7 +169,7 @@
 
         <!-- 底线  -->
         <view class="bottom" hidden="{{!notMoreDiaryData}}">
-            ——· 我也是有顶线的哦 ·——
+            ——· 我也是有底线的哦 ·——
         </view>
 
     </block>

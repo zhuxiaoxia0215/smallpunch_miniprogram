@@ -117,6 +117,30 @@ Page({
         }
     },
 
+    getUserProfile(e) {
+        console.log(e);
+        let that = this;
+        wx.getUserProfile({
+            desc: '用于完善会员资料', 
+            success: (res) => {
+            console.log("微信用户授权信息：");
+            console.log(res);
+
+            app.globalData.userInfo.avatar_url = res.userInfo.avatarUrl;
+            app.globalData.userInfo.nick_name = res.userInfo.nickName;
+            app.globalData.userInfo.sex = parseInt(res.userInfo.gender);
+
+            // 3.提交所获取的微信用户授权信息至服务器、服务器进行新用户的注册，
+            // 已注册用户则直接返回服务器端该用户的详细信息
+            that.addWeiXinUserInfo();
+
+            wx.switchTab({
+                url: '../index/index'
+            })
+        }
+      })
+    },
+
 
     // 服务器端根据openid判断用户信息是否存在，不存在将用户微信信息存入数据库
     addWeiXinUserInfo: function() {

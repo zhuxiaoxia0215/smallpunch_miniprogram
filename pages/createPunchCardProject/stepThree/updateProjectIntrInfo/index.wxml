@@ -1,16 +1,4 @@
 <view class="container">
-    <!-- <view class="edit-project-intr-activity-notice" bindtap="getActivityDetailInfo">
-        <view class="gold-icon">
-            <image src="../../../../images/bottomIcon/gold.png"></image>
-        </view>
-        <!-- <view class="notice-message">
-            <text>填写圈子介绍赢20金币，点击查看规则</text>
-        </view> -->
-        <!-- <view class="into-btn-icon">
-            <image src="../../../../images/button/into_btn_gray.png"></image>
-        </view>
-    </view> -->
-
     <!--编辑的圈子介绍-->
     <block wx:if="{{projectIntrInfoList}}">
         <view class="project-intr-info-list">
@@ -146,11 +134,6 @@
             </view> -->
         </view>
     </view>
-
-    <!--电脑端编辑提示-->
-    <!-- <view class="web-site-edit-notice">
-        <view>使用电脑访问<text class="web-site">www.myxu.xyz</text>发布主题，可上传MP3格式音频和更大的视频文件，图文编辑更方便。</view>
-    </view> -->
 
     <!--保存按钮-->
     <view class="update-project-intr-info" bindtap="updateProjectIntrInfo">
