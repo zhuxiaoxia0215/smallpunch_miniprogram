@@ -14,25 +14,6 @@ Page({
 
     // 被查看主页的用户基本信息
     visitedUserInfo: {
-      //  属性说明
-      // "id": 1,
-      // "avatar_url": "用户头像地址",
-      // "nick_name": "MYXuu",
-      // "weixin_num": null,
-      // "birthday": null,
-      // "sex": 1,
-      // "person_sign": null,
-      // "personal_page_visit_num": 2,
-      // // 前五条访问记录信息
-      // "fivePersonalPageVisitRecord": [{
-      //     "id": 12,
-      //     "visited_id": 1, // 被访问者用户id
-      //     "create_time": "2019-05-10 12:02:00",
-      //     "visitorInfo": {
-      //         "id": 8, // 访问者用户id
-      //         "avatar_url": "访问者头像"
-      //     }
-      // }]
     },
 
     userInfo: {}, // 当前小程序使用者信息，也就是主页访问者信息

@@ -93,30 +93,6 @@
 
     <view class="separator-height-10px"></view>
 
-    <!--竞争力排名-->
-    <!-- <view class="project-compete-rank" bindtap="intoProjectCompeteRankDetailPage">
-        <view>竞争力排名</view>
-        <text class="rank">差</text>
-        <image src="/images/button/into_btn_gray.png"></image>
-    </view> -->
-
-    <!-- <view class="separator-height-10px"></view> -->
-
-    <!--打卡契约-->
-    <!-- <view class="punch-card-convention" bindtap="intoCreatePunchCardConventionPage">
-        <view class="punch-card-convention-help">
-            <text>打卡契约</text>
-            <image catchtap="conventionHelp" src="/images/button/question.png">
-            </image>
-        </view>
-
-        <view class="into-create-punch-card-convention-page">
-            <image src="/images/button/into_btn_gray.png"></image>
-        </view>
-    </view>
-
-    <view class="separator-height-10px"></view> -->
-
     <!--管理功能列表-->
     <view class="back-stage-manage-function-list">
     </view>

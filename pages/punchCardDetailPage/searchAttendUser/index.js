@@ -10,7 +10,7 @@ Page({
     inputShowed: true,
     inputVal: "",
 
-    // 符合搜索添加的打卡圈子列表
+    // 符合搜索添加的成员列表
     attendUserList: [],
 
     pageNo: 1, // 符合条件的搜索记录页码,默认第一页开始
@@ -94,7 +94,7 @@ Page({
       return false;
     }
 
-    // 开启打卡圈子搜索中的加载动画
+    // 开启成员搜索中的加载动画
     that.setData({
       showSearchLoading: true
     });

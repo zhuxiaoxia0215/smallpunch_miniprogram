@@ -9,14 +9,7 @@ Page({
         imgRootPath: app.globalData.imgBaseSeverUrl,
 
         projectId: 0,
-        projectIntrInfoList: [
-            // {order: 0, type: 1, content: 'text'},
-            // {order: 1, type: 2, content: 'imgUrl'},
-            // {order: 2, type: 3, content: 'soundFileUrl'},
-            // {order: 3, type: 4, content: 'videoFileUrl'},
-            // 具有id、project_id这两个字段的简介记录是已经保存至数据库中的，若本地删除则同时也要删除数据库中的
-            // {id: 1,project_id: 2 ,order: 4, type: 4, content: 'videoFileUrl'},
-        ],
+        projectIntrInfoList: [],
         deleteIntrInfoIdList: [], // 记录数据库中需要被删除的圈子简介id
         isExistProjectIntrInfo: false,// 根据stepThree页面传递的projectIntrInfo来判断是否存在简介记录
 

@@ -16,18 +16,6 @@ Page({
         emptyContentNotice: '暂无数据',
 
         myLikedList: [
-            // 属性说明
-            // {
-            //     "id": 113,  // 点赞记录id
-            //     "diary_id": 45, // 对应的日记记录id
-            //     "liked_user_id": 1, // 被点赞者用户id 也就是当前用户id
-            //     "create_time": "2019-05-11 14:52:45", // 点赞时间
-            //     "admirer": {   // 点赞者信息
-            //         "id": 9, // 点赞者用户id
-            //         "avatar_url": "", // 点赞者用户头像
-            //         "nick_name": "李圣英" // 点赞者昵称
-            //     }
-            // },
         ],
 
         myCommentedList:[

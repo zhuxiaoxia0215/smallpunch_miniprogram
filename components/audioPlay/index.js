@@ -8,11 +8,6 @@ Component({
   properties: {
     audioFileInfo: {
       type: Object,
-      // 属性说明: {
-      //     resource_url: '音频文件的路径',
-      //     id: '资源文件id',
-      //     type:  '资源文件类型'
-      // }
     },
     audioName: {
       type: String
@@ -43,19 +38,6 @@ Component({
 
     // 设置音频文件播放源
     innerAudioContext.src = that.data.resRootPath + that.data.audioFileInfo.resource_url;
-
-    //音频进入可以播放状态，但不保证后面可以流畅播放
-    // innerAudioContext.onCanplay(() => {
-    //     innerAudioContext.duration //类似初始化-必须触发-不触发此函数延时也获取不到
-    //     setTimeout(function () {
-    //         that.data.audioPlayEndTime = Math.floor(innerAudioContext.duration);
-    //         that.setData({
-    //             audioPlayEndTime: innerAudioContext.duration,
-    //             audioPlayEndTimeStr: formatSeconds(that.data.audioPlayEndTime)
-    //         });
-    //     }, 1000)  //这里设置延时100毫秒获取
-    // });
-
     console.log('audioPlayComponent attached');
   },
   

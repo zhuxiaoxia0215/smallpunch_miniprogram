@@ -28,33 +28,12 @@
     align-items: center;
 }
 .audio-control-btn {
-    /*width: 60%;*/
-    /*height: 60%;*/
-    /*border: 6rpx solid whitesmoke;*/
-    /*border-radius: 50%;*/
-
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-
-    /*解决图片高度等同宽度问题*/
-    /**
-     * 个人理解是：
-     * 1、在父级元素中设置高度为0，设置padding-bottom的百分比来撑开元素高度，
-     *    由于padding-bottom、padding-top这两个属性的百分比是根据元素宽度计算的，所以只要
-     *    padding-bottom的百分比跟宽度百分比一致，这时候得到就是一个正方形的父级元素了
-     * 2、最后还要分别设置父级、子级元素relative|absolute定位属性，现在我还没搞懂原理(不设置不行)
-     */
     width: 60%;
     height: 0;
     padding-bottom: 60%;
     position: relative;
 }
 .audio-control-btn > image {
-    /*width: 40rpx;*/
-    /*height: 40rpx;*/
-
     /*解决图片高度等同于宽度问题*/
     width: 100%;
     height: 100%;
@@ -63,7 +42,6 @@
 
 /*音频播放视图 播放进度条区域*/
 .audio-play-progress-area {
-    /*background-color: yellow;*/
     width: 80%;
     height: 130rpx;
 
